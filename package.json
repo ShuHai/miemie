@@ -4,7 +4,7 @@
   "description": "my test library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup --config rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ShuHai/miemie/issues"
   },
-  "homepage": "https://github.com/ShuHai/miemie#readme"
+  "homepage": "https://github.com/ShuHai/miemie#readme",
+  "devDependencies": {
+    "rollup": "^0.36.3"
+  }
 }
