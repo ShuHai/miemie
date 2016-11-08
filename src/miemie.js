@@ -1,4 +1,4 @@
-import Utils from './utils/test'
+import Utils from './utils/array'
 class Mie {
   constructor () {
     this.utils = new Utils()
