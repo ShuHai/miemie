@@ -17,4 +17,19 @@ export default class Array {
   isArray (object) {
     return Object.prototype.toString.call(object) === '[object Array]'
   }
+
+  // 数组求交集
+  intersection (arr1, arr2) {
+
+  }
+
+  // 数组求并集
+  union (arr1, arr2) {
+
+  }
+
+  // 数组求差集
+  difference (arr1, arr2) {
+
+  }
 }

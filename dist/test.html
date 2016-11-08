@@ -7,10 +7,14 @@
 <body>
   <script type="text/javascript" src="miemie.min.js"></script>
   <script>
+    // 测试用例写在这里
     var miemie = window.miemie
-    miemie.utils.hello()
+    miemie.array.hello()
     var testArr = [1, 2, 34, 2, 1, 66, 'aa', 'bb', 'aa']
-    console.log(miemie.utils.unique(testArr))
+    console.log(miemie.array.unique(testArr))
+    console.log(miemie.array.isArray(testArr))
+
+    console.log(miemie.number.sum(1, 2, 3, 4, 5))
   </script>
 </body>
 </html>

@@ -1,7 +1,9 @@
-import Utils from './utils/array'
+import ArrayMethod from './utils/array'
+import NumberMethod from './utils/number'
 class Mie {
   constructor () {
-    this.utils = new Utils()
+    this.array = new ArrayMethod()
+    this.number = new NumberMethod()
   }
 }
 
