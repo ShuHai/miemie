@@ -5,5 +5,5 @@ export default {
   dest: 'dist/miemie.min.js',
   moduleName: 'miemie',
   plugins: [ buble() ],
-  format: 'iife'
+  format: 'umd'
 };
