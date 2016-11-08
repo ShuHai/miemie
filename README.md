@@ -1,5 +1,5 @@
 # miemie
-my tool librarty
+my tool library
 
 dev
 --------

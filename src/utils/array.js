@@ -12,4 +12,9 @@ export default class Array {
     })
     return result
   }
+
+  // 判断是否是数组
+  isArray (object) {
+    return Object.prototype.toString.call(object) === '[object Array]'
+  }
 }
