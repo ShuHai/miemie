@@ -7,7 +7,10 @@
 <body>
   <script type="text/javascript" src="miemie.min.js"></script>
   <script>
-    window.miemie.utils.hello('吃饱了')
+    var miemie = window.miemie
+    miemie.utils.hello()
+    var testArr = [1, 2, 34, 2, 1, 66, 'aa', 'bb', 'aa']
+    console.log(miemie.utils.unique(testArr))
   </script>
 </body>
 </html>
