@@ -19,17 +19,26 @@ export default class Array {
   }
 
   // 数组求交集
-  intersection (arr1, arr2) {
-
+  intersection () {
+    console.log(arguments)
+    let args = Array.prototype.slice.call(arguments)
+    console.log(args)
+    console.log('test')
+    let arr = []
+    args.map(item => {
+      arr = arr || this.isArray(item) ? item : arr
+      arr.indexOf(item) !== -1 ? arr.push(item) : null
+    })
+    return arr
   }
 
   // 数组求并集
-  union (arr1, arr2) {
+  union () {
 
   }
 
   // 数组求差集
-  difference (arr1, arr2) {
+  difference () {
 
   }
 }
