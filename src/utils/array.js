@@ -1,4 +1,4 @@
-export default class Array {
+export default class ArrayMethod {
   hello (message) {
     let a = message || 'hello world'
     console.log(a)
@@ -20,21 +20,18 @@ export default class Array {
 
   // 数组求交集
   intersection () {
-    console.log(arguments)
-    let args = Array.prototype.slice.call(arguments)
-    console.log(args)
-    console.log('test')
-    let arr = []
-    args.map(item => {
-      arr = arr || this.isArray(item) ? item : arr
-      arr.indexOf(item) !== -1 ? arr.push(item) : null
-    })
-    return arr
   }
 
   // 数组求并集
   union () {
-
+    // console.log(arguments)
+    // let args = Array.prototype.slice.call(arguments)
+    // let arr = []
+    // args.map(item => {
+    //   arr = arr.length ? arr : this.isArray(item) ? item : arr
+    //   arr.indexOf(item) !== -1 ? arr.push(item) : null
+    // })
+    // return arr
   }
 
   // 数组求差集
