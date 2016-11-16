@@ -6,11 +6,15 @@ export default class ArrayMethod {
 
   // 数组去重
   unique (arr) {
-    let result = []
-    arr.map(item => {
-      result.indexOf(item) === -1 ? result.push(item) : null
-    })
-    return result
+    // let result = []
+    // arr.map(item => {
+    //   result.indexOf(item) === -1 && result.push(item)
+    // })
+    // return result
+
+    let _obj = {}
+    arr.forEach(x => { _obj[x] = '' })
+    return Object.getOwnPropertyNames(_obj)
   }
 
   // 判断是否是数组
@@ -19,23 +23,25 @@ export default class ArrayMethod {
   }
 
   // 数组求交集
-  intersection () {
+  intersection (arr1, arr2) {
+    let setArr1 = new Set(arr1)
+    let setArr2 = new Set(arr2)
+    let result = new Set([...setArr1].filter(x => { return setArr2.has(x) }))
+    return Array.from(result)
   }
 
   // 数组求并集
-  union () {
-    // console.log(arguments)
-    // let args = Array.prototype.slice.call(arguments)
-    // let arr = []
-    // args.map(item => {
-    //   arr = arr.length ? arr : this.isArray(item) ? item : arr
-    //   arr.indexOf(item) !== -1 ? arr.push(item) : null
-    // })
-    // return arr
+  union (arr1, arr2) {
+    let setArr1 = new Set(arr1)
+    let setArr2 = new Set(arr2)
+    return Array.from(new Set([...setArr1, ...setArr2]))
   }
 
   // 数组求差集
-  difference () {
-
+  difference (arr1, arr2) {
+    let setArr1 = new Set(arr1)
+    let setArr2 = new Set(arr2)
+    let result = new Set([...setArr1].filter(x => { return !setArr2.has(x) }))
+    return Array.from(result)
   }
 }
