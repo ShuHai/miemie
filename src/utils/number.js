@@ -1,4 +1,4 @@
-export default class Number {
+export default class NumberMethod {
   isNumber (num) {
     return !isNaN(num)
   }
