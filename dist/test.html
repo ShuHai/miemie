@@ -17,8 +17,10 @@
     var object = {a: {b: 3}, c: 3}
     var testObjectCopy = miemie.object.deepClone(object)
     console.log(testObjectCopy)
-    console.log(testObjectCopy == object);
-
+    console.log(testObjectCopy === object)
+    console.log('-------')
+    var aobject = miemie.object.assign({a: 3}, {b: 4}, {c: 5}, {a: 6})
+    console.log(aobject)
   </script>
 </body>
 </html>

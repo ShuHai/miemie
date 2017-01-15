@@ -12,4 +12,15 @@ export default class ObjectMethod {
     return newObj
   }
 
+  // 合并对象,同样元素会保留后者
+  assign () {
+    let args = Array.prototype.slice.call(arguments)
+    let obj = {}
+    if (args.length) {
+      args.forEach(item => {
+        obj = Object.assign(obj, item)
+      })
+    }
+    return obj
+  }
 }
