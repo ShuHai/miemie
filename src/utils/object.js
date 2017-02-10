@@ -23,4 +23,9 @@ export default class ObjectMethod {
     }
     return obj
   }
+
+  // 判断对象属性在其原型上是否存在
+  hasPrototypeProperty(object, name) {
+    return  !object.hasOwnProperty(name) && (name in object)
+  }
 }
