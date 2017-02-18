@@ -8,7 +8,7 @@ import StringMethod from './utils/string'
 class Mie {
   constructor () {
     this.array = new ArrayMethod()
-    this.number = new DateMethod()
+    this.date = new DateMethod()
     this.object = new MathMethod()
     this.number = new NumberMethod()
     this.object = new ObjectMethod()
