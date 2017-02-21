@@ -1,18 +1,4 @@
 export default class DateMethod {
-  // 获取所有跟今天有关的信息
-  getToday () {
-    let today = new Date()
-    let todayObj = {}
-    todayObj.year = today.getFullYear()
-    todayObj.month = today.getMonth() + 1
-    todayObj.day = today.getDate()
-    todayObj.hour = today.getHours()
-    todayObj.minute = today.getMinutes()
-    todayObj.second = today.getSeconds()
-    todayObj.weekend = today.getDay()
-    todayObj.tiemStamp = today.getTime()
-    return todayObj
-  }
 
   // 获取跟今天比较的任意一天
   getDayFromToday (time) {
@@ -28,5 +14,10 @@ export default class DateMethod {
     dayObj.weekend = day.getDay()
     dayObj.tiemStamp = day.getTime()
     return dayObj
+  }
+
+  // 获取所有跟今天有关的信息
+  getToday () {
+    return this.getDayFromToday(0)
   }
 }
