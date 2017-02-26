@@ -3,7 +3,7 @@ my tool library
 
 dev
 --------
-npm install
+npm install / yarn
 
 npm run build
 
