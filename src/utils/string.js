@@ -11,4 +11,15 @@ export default class StringMethod {
       return arr.join('')
     }
   }
+
+  // 去空格, 默认去掉全部，可选只去掉左边(left)或者右边(right)
+  trim (string, direction) {
+    if (direction === 'left') {
+      return string.replace(/(^\s*)/g, '')
+    } else if (direction === 'right') {
+      return string.replace(/(\s*$)/g, '')
+    } else {
+      return string.replace(/(^\s*)|(\s*$)/g, '')
+    }
+  }
 }
