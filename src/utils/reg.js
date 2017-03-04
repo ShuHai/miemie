@@ -4,9 +4,13 @@ export default class RegMethod {
     let reg = new RegExp(rule)
     return reg.test(string)
   }
-  // 判断字符串中是否全是数字
-  checkNum (string) {
-    return this.justCheck(string, '^[0-9]*$')
+  // 判断字符串中是否全是数字,length可选，指定位数
+  checkNum (string, length) {
+    if (length) {
+      return this.justCheck(string, `^\\d{${length}}$`)
+    } else {
+      return this.justCheck(string, '^[0-9]*$')
+    }
   }
 
   // 判断手机号是否合法, true严格， false只检查位数和数字
@@ -17,6 +21,4 @@ export default class RegMethod {
       return this.justCheck(string, '^\\d{11}$')
     }
   }
-
-
 }
