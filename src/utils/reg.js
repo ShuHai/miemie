@@ -9,7 +9,7 @@ export default class RegMethod {
     if (length) {
       return this.justCheck(string, `^\\d{${length}}$`)
     } else {
-      return this.justCheck(string, '^[0-9]*$')
+      return this.justCheck(string, '^[0-9]+$')
     }
   }
 
@@ -20,5 +20,10 @@ export default class RegMethod {
     } else {
       return this.justCheck(string, '^\\d{11}$')
     }
+  }
+
+  // 判断字符串是否全是英文
+  checkLetter (string) {
+    return this.justCheck(string, '^[A-Za-z]+$')
   }
 }
