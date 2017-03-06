@@ -26,4 +26,9 @@ export default class RegMethod {
   checkLetter (string) {
     return this.justCheck(string, '^[A-Za-z]+$')
   }
+
+  // m-n位的数字
+  checkRangeNumber (string, m, n) {
+    return this.justCheck(string, `^\d{${m},${n}}$`)
+  }
 }
